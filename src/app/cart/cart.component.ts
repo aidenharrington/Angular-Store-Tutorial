@@ -8,6 +8,7 @@ import { CartService } from '../cart.service';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
+
 export class CartComponent implements OnInit {
   items;
   checkoutForm;
@@ -25,7 +26,7 @@ export class CartComponent implements OnInit {
    }
 
   onSubmit(customerData) {
-    console.warn('Your order has been submitted', customerData);
+    console.warn('Your order has been submitted' , customerData);
 
     this.items = this.cartService.clearCart();
     this.checkoutForm.reset();
